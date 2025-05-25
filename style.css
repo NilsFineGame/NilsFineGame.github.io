@@ -47,6 +47,7 @@ body::after {
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  text-align: center; /* This centers inline-block children */
 }
 
 h1 {
@@ -87,4 +88,11 @@ h1 {
 .main-box iframe,
 .main-box img {
   background: #000;
+}
+
+#devlog-list {
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left; /* Keeps content inside each li aligned left */
 }
