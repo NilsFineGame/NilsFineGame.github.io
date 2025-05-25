@@ -1,7 +1,7 @@
 const backgrounds = {
   "evelyn": {
     "img": "/images/evelyn.png",
-    "scrollAmount": 0, // px, should match tile width after scaling
+    "scrollAmount": 520, // px, should match tile width after scaling
     "scrollSpeed": 10,   // seconds
     "tint": "rgba(0,0,0,0.3)"
   },
@@ -54,12 +54,8 @@ function changeImage(x,image,y)
 function setBackground(bgKey) {
   const bg = backgrounds[bgKey];
   if (!bg) return;
-
-  // Set background image
   document.body.style.setProperty('--tile-bg', `url('${bg.img}')`);
-  // Set tint
   document.body.style.setProperty('--tile-tint', bg.tint);
-  // Set animation duration and keyframes dynamically
   document.body.style.setProperty('--scroll-speed', `${bg.scrollSpeed}s`);
   document.body.style.setProperty('--scroll-amount', `-${bg.scrollAmount}px`);
 }
