@@ -93,3 +93,41 @@ function getTileWidth(imgPath, callback) {
 }
 
 // Example usage: setBackground('evelyn');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const type = document.body.getAttribute('data-page-type');
+
+  switch (type) {
+    case 'devlog':
+      // Add "See other devlogs" at the bottom
+      const footer = document.createElement('div');
+      footer.style.textAlign = 'center';
+      footer.style.marginTop = '40px';
+      footer.innerHTML = `
+        <hr>
+        <p>Want to see more devlogs?</p>
+        <a href="/devlogs/" style="font-size:1.2em;">Browse all devlogs</a>
+      `;
+      document.body.appendChild(footer);
+      break;
+
+    case 'main':
+      // Add your top bar with clickable buttons
+      const bar = document.createElement('div');
+      bar.className = 'top-bar';
+      bar.innerHTML = `
+        <a href="/devlogs/"><img src="/images/prem1.png" width="130" onmouseover="changeImage(1,this)" onmouseout="changeImage(2,this)"></a>
+        <a href="/demo/"><img src="/images/dem2.png" width="100" onmouseover="changeImage(3,this)" onmouseout="changeImage(4,this)"></a>
+        <a href="/about/"><img src="/images/cred1.png" width="140" onmouseover="changeImage(5,this)" onmouseout="changeImage(6,this)"></a>
+        <a href="https://discord.gg/df3t2DRjaY"><img src="/images/disc1.png" width="150" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
+        <hr>
+      `;
+      document.body.insertBefore(bar, document.body.firstChild);
+      break;
+
+    default:
+      // Optional: handle unknown or default page types
+      // e.g., log, show a message, or do nothing
+      break;
+  }
+});
