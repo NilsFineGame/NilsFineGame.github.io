@@ -87,5 +87,5 @@ body::after {
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
   pointer-events: none;
-  background: rgba(0,0,0,0.3); /* black tint, adjust color/alpha as needed */
+  background: rgba(10,10,10,0); /* black tint, adjust color/alpha as needed */
 }
