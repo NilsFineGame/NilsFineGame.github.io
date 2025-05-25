@@ -11,6 +11,7 @@ const backgrounds = {
   }
 };
 
+let currentBgKey = null;
 
 function changeImage(x,image,y)
 {
@@ -49,6 +50,7 @@ function changeImage(x,image,y)
         }
 }
 function setBackground(bgKey) {
+  currentBgKey = bgKey; // Save the current background key
   const bg = backgrounds[bgKey];
   if (!bg) return;
 
@@ -59,6 +61,11 @@ function setBackground(bgKey) {
     document.body.style.setProperty('--scroll-amount', `-${scaledWidth}px`);
   });
 }
+
+// Recalculate on window resize
+window.addEventListener('resize', function() {
+  if (currentBgKey) setBackground(currentBgKey);
+});
 
 function getTileWidth(imgPath, callback) {
   const img = new Image();
