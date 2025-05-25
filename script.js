@@ -13,6 +13,11 @@ const backgrounds = {
     "img": "/images/charley1.png",
     "scrollSpeed": 1,
     "tint": "rgba(0,0,0,0.3)"
+  },
+  "trees": {
+    "img": "/images/trees.png",
+    "scrollSpeed": 10,
+    "tint": "rgba(0,0,0,0.3)"
   }
 };
 
