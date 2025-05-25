@@ -38,13 +38,17 @@ const devlogs = [
 const list = document.getElementById('devlog-list');
 devlogs.forEach(log => {
   const li = document.createElement('li');
+  li.style.listStyle = "none";
+  li.style.marginBottom = "40px";
   li.innerHTML = `
-    <a href="./${log.folder}/">
-      <img src="${log.img}" alt="${log.title} thumbnail" style="width:80px;vertical-align:middle;margin-right:10px;">
-      ${log.title}
-    </a>
-    <small>${log.date}</small><br>
-    <span>${log.summary}</span>
+    <div style="text-align:center;">
+      <div style="font-size:1.5em;margin-bottom:8px;">${log.title}</div>
+      <a href="./${log.folder}/">
+        <img src="${log.img}" alt="${log.title} thumbnail" style="width:180px;display:block;margin:0 auto 10px auto;">
+      </a>
+      <div style="margin-bottom:6px;color:#aaa;font-size:0.9em;">${log.date}</div>
+      <div style="max-width:400px;margin:0 auto;">${log.summary}</div>
+    </div>
   `;
   list.appendChild(li);
 });
