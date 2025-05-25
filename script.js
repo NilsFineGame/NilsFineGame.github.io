@@ -8,6 +8,11 @@ const backgrounds = {
     "img": "/images/image_example.jpg",
     "scrollSpeed": 10,
     "tint": "rgba(0,0,0,0.3)"
+  },
+  "charley": {
+    "img": "/images/charley1.png",
+    "scrollSpeed": 1,
+    "tint": "rgba(0,0,0,0.3)"
   }
 };
 
