@@ -7,7 +7,7 @@ const backgrounds = {
   },
   "image_test": {
     "img": "/images/image_example.jpg",
-    "scrollAmount": 520,
+    "scrollAmount": 607,
     "scrollSpeed": 10,
     "tint": "rgba(0,0,0,0.5)"
   }
