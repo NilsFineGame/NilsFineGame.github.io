@@ -22,7 +22,7 @@ body::before {
   background: url('/images/image_example.jpg') repeat;
   background-size: auto;
   animation: scroll-bg 10s linear infinite;
-  opacity: 0.5; /* adjust for effect */
+  opacity: 1; /* adjust for effect */
 }
 
 @keyframes scroll-bg {
@@ -79,4 +79,13 @@ h1 {
 .main-box iframe,
 .main-box img {
   background: #000;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(0,0,0,0.3); /* black tint, adjust color/alpha as needed */
 }
