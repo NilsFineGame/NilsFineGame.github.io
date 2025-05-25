@@ -13,4 +13,20 @@
       font-family: "naught";
       image-rendering: crisp-edges;}
    h1 {
-      text-align: center;}
+      text-align: center;
+   }
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: url('/images/image_example.jpg') repeat;
+  background-size: auto;
+  animation: scroll-bg 10s linear infinite;
+  opacity: 0.5; /* adjust for effect */
+}
+
+@keyframes scroll-bg {
+  0% { background-position: 0 0; }
+  100% { background-position: -200px 0; } /* adjust -200px to your tile width */
+}
