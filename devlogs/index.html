@@ -1,0 +1,64 @@
+<!-- Example structure -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NFG</title>
+    <link rel="icon" type="image/x-icon" href="/images/ped_point.ico">
+    <link href="/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-box">
+      <center>
+        <a href="/about/"><img src="/images/prem1.png" width="130" class="responsive" onmouseover="changeImage(1,this)" onmouseout="changeImage(2,this)"></a>
+        <a href="/demo/"><img src="/images/dem2.png" width="100" class="responsive" onmouseover="changeImage(3,this)" onmouseout="changeImage(4,this)"></a>
+        <a href="/about/"><img src="/images/cred1.png" width="140" class="responsive" onmouseover="changeImage(5,this)" onmouseout="changeImage(6,this)"></a>
+        <a href="https://discord.gg/df3t2DRjaY"><img src="/images/disc1.png" width="150" class="responsive" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
+      </center>
+      <h1><img src="/images/c_splash.png" width="250"></h1>
+      <center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cg3pt1HKcZw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </center>
+    </div>
+    <div class="main-box">
+      <h1>Devlogs</h1>
+      <ul id="devlog-list"></ul>
+    </div>
+    <script src="/script.js"></script>
+    <script>
+      setBackground('trees');
+    </script>
+    <script>
+const devlogs = [
+  {
+    title: "Test log: Getting Started",
+    folder: "devlog1",
+    date: "2025-05-01",
+    summary: "Initial project setup and first steps.",
+    img: "images/devlog1_thumb.png"
+  },
+  {
+    title: "Devlog 2: New Features",
+    folder: "devlog2",
+    date: "2024-05-10",
+    summary: "Implemented new gameplay features.",
+    img: "images/devlog2_thumb.png"
+  }
+];
+
+const list = document.getElementById('devlog-list');
+devlogs.forEach(log => {
+  const li = document.createElement('li');
+  li.innerHTML = `
+    <a href="./${log.folder}/">
+      <img src="${log.img}" alt="${log.title} thumbnail" style="width:80px;vertical-align:middle;margin-right:10px;">
+      ${log.title}
+    </a>
+    <small>${log.date}</small><br>
+    <span>${log.summary}</span>
+  `;
+  list.appendChild(li);
+});
+    </script>
+  </body>
+</html>
