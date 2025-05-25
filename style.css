@@ -103,3 +103,11 @@ img {
   display: inline-block;
   text-align: left; /* Keeps content inside each li aligned left */
 }
+
+body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
+  font-family: 'naught', monospace;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeSpeed;
+}
