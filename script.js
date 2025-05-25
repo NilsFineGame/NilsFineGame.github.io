@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="/demo/"><img src="/images/dem2.png" width="100" onmouseover="changeImage(3,this)" onmouseout="changeImage(4,this)"></a>
         <a href="/about/"><img src="/images/cred1.png" width="140" onmouseover="changeImage(5,this)" onmouseout="changeImage(6,this)"></a>
         <a href="https://discord.gg/df3t2DRjaY"><img src="/images/disc1.png" width="150" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
-        <hr>
       `;
       document.body.insertBefore(bar, document.body.firstChild);
       break;
@@ -131,3 +130,28 @@ document.addEventListener('DOMContentLoaded', function() {
       break;
   }
 });
+
+const style = document.createElement('style');
+style.textContent = `
+  .top-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1000;
+  }
+  .top-bar a {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-bar img {
+    display: block;
+    margin: 0 auto;
+  }
+`;
+document.head.appendChild(style);
