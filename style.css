@@ -1,20 +1,19 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-   @font-face { font-family: 'naught'; src: url("fonts/naught.ttf")}
-   body { margin: auto;
-      width: 50%;
-      border: 3px solid rgb(255, 255, 255);
-      padding: 10px;
-      background-color: black; 
-      margin-bottom: 60px;
-      margin-top: 60px;
-      color: #ffffff; 
-      font-family: "naught";
-      image-rendering: crisp-edges;}
-   h1 {
-      text-align: center;
-   }
+@font-face {
+  font-family: 'naught';
+  src: url("/fonts/naught.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "naught";
+  color: #ffffff;
+  background: none; /* Remove default background */
+  position: relative;
+}
+
+/* The animated, tiled GIF background */
 body::before {
   content: "";
   position: fixed;
@@ -29,4 +28,20 @@ body::before {
 @keyframes scroll-bg {
   0% { background-position: 0 0; }
   100% { background-position: -200px 0; } /* adjust -200px to your tile width */
+}
+
+/* The main content box */
+.main-box {
+  margin: 60px auto;
+  width: 50%;
+  background: black;
+  border: 3px solid #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  text-align: center;
 }
