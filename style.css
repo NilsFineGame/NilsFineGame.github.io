@@ -15,7 +15,7 @@ body {
 body::before {
   /* ...other styles... */
   background: url('/images/image_example.jpg') repeat;
-  background-size: 128px auto; /* or auto if you want original size */
+  background-size: 500px auto; /* or auto if you want original size */
   animation: scroll-bg 4s linear infinite; /* adjust 4s for speed */
   opacity: 1;
 }
@@ -32,7 +32,7 @@ body::after {
 
 @keyframes scroll-bg {
   0% { background-position: 0 0; }
-  100% { background-position: -128px 0; } /* negative tile width */
+  100% { background-position: 500px 0; } /* negative tile width */
 }
 
 /* The main content box */
