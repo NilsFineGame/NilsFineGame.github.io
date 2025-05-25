@@ -45,17 +45,34 @@ body::before {
 h1 {
   text-align: center;
 }
+
 .main-box {
   margin: 60px auto;
   width: 50%;
-  background: #000;           /* solid black */
+  background: #000 !important;   /* force solid black */
   border: 3px solid #fff;
   padding: 10px;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
-  /* Ensure no transparency */
   opacity: 1;
+  overflow: hidden;
+}
+
+/* Add a solid black layer behind all content in the box */
+.main-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure all direct children are above the black background */
+.main-box > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Make sure iframes and images don't have transparency */
