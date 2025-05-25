@@ -135,13 +135,17 @@ const style = document.createElement('style');
 style.textContent = `
   .top-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    position: relative;
+    padding: 10px 32px;
+    background-color: rgba(0,0,0,0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     z-index: 1000;
+    border-bottom: 2px solid #222;
+    box-sizing: border-box;
   }
   .top-bar a {
     flex: 1 1 0;
@@ -152,6 +156,9 @@ style.textContent = `
   .top-bar img {
     display: block;
     margin: 0 auto;
+    background: #000;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
 `;
 document.head.appendChild(style);
