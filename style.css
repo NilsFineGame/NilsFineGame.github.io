@@ -90,6 +90,11 @@ h1 {
   background: #000;
 }
 
+img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
 #devlog-list {
   padding: 0;
   margin: 0 auto;
