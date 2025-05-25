@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 70px; /* Adjust this value to match your top bar's height */
   min-height: 100vh;
   font-family: "naught";
   color: #ffffff;
