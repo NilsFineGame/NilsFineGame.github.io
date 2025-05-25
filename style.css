@@ -13,13 +13,10 @@ body {
   position: relative;
 }
 body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -2; /* lower than body::after */
+  /* ...other styles... */
   background: url('/images/image_example.jpg') repeat;
-  background-size: auto;
-  animation: scroll-bg 10s linear infinite;
+  background-size: 128px auto; /* or auto if you want original size */
+  animation: scroll-bg 4s linear infinite; /* adjust 4s for speed */
   opacity: 1;
 }
 
@@ -32,9 +29,10 @@ body::after {
   background: rgba(0, 0, 0, 0.3); /* black tint */
 }
 
+
 @keyframes scroll-bg {
   0% { background-position: 0 0; }
-  100% { background-position: -200px 0; } /* adjust -200px to your tile width */
+  100% { background-position: -128px 0; } /* negative tile width */
 }
 
 /* The main content box */
