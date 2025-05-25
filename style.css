@@ -16,13 +16,12 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -2; /* lower than body::after */
-  background: url('/images/image_example.jpg') repeat;
-  background-size: auto;
+  z-index: -2;
+  background: var(--tile-bg, url('/images/image_example.jpg')) repeat;
+  background-size: auto 100vh;
   animation: scroll-bg 10s linear infinite;
   opacity: 1;
 }
-
 body::after {
   content: "";
   position: fixed;

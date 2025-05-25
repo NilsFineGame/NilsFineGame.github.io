@@ -33,6 +33,7 @@ function changeImage(x,image,y)
         {
         image.src = "/images/disc1.png"
         }
-
-
+}
+function setTileBackground(imageUrl) {
+  document.body.style.setProperty('--tile-bg', `url('${imageUrl}')`);
 }
