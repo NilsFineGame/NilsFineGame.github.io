@@ -19,7 +19,7 @@ body::before {
   z-index: -2;
   background: var(--tile-bg, url('/images/image_example.jpg')) repeat;
   background-size: auto 100vh;
-  animation: scroll-bg 10s linear infinite;
+  animation: scroll-bg var(--scroll-speed, 10s) linear infinite;
   opacity: 1;
 }
 body::after {
@@ -28,13 +28,13 @@ body::after {
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1; /* above body::before */
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.3); /* black tint */
+  background: var(--tile-tint, rgba(0,0,0,0.3));
 }
 
 
 @keyframes scroll-bg {
   0% { background-position: 0 0; }
-  100% { background-position: -500px 0; } /* negative tile width */
+  100% { background-position: var(--scroll-amount, -500px) 0; }
 }
 
 /* The main content box */
