@@ -1,7 +1,7 @@
 const backgrounds = {
   "evelyn": {
     "img": "/images/evelyn.png",
-    "scrollAmount": 400, // px, should match tile width after scaling
+    "scrollAmount": 300, // px, should match tile width after scaling
     "scrollSpeed": 10,   // seconds
     "tint": "rgba(0,0,0,0.3)"
   },
