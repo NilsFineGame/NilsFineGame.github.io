@@ -111,3 +111,29 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   -moz-osx-font-smoothing: auto;
   text-rendering: optimizeSpeed;
 }
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid #222;
+}
+
+.top-bar img {
+  background: #000;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  transition: transform 0.1s;
+}
+
+.top-bar img:hover {
+  transform: scale(1.08);
+}
