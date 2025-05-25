@@ -21,6 +21,8 @@ body::before {
   background-size: auto 100vh;
   animation: scroll-bg var(--scroll-speed, 1s) linear infinite;
   opacity: 1;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 body::after {
   content: "";
