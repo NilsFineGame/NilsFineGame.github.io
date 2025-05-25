@@ -120,9 +120,9 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   z-index: 100;
   background: rgba(0,0,0,0.85);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between; /* edge-to-edge spacing */
   align-items: center;
-  padding: 8px 0;
+  padding: 8px 32px; /* Add horizontal padding for breathing room */
   box-sizing: border-box;
   border-bottom: 2px solid #222;
 }
@@ -131,9 +131,9 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   background: #000;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  transition: transform 0.1s;
+  /* Remove transform on hover for pixel-perfect look */
 }
 
 .top-bar img:hover {
-  transform: scale(1.08);
+  /* No transform for pixel-perfect hover */
 }
