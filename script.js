@@ -156,7 +156,6 @@ style.textContent = `
   .top-bar img {
     display: block;
     margin: 0 auto;
-    background: #000;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
   }
