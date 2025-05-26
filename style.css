@@ -129,10 +129,11 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
 }
 
 .top-bar img {
-  background: #000;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  /* Remove transform on hover for pixel-perfect look */
+  display: block;
+  margin: 0 auto;
+  /* No background property here! */
 }
 
 .top-bar img:hover {
