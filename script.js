@@ -147,10 +147,10 @@ style.textContent = `
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 32px; /* Increased vertical padding for taller bar */
+    padding: 10px 32px;
     background-color: rgba(0,0,0,0.85);
     position: fixed;
-    top: -90px; /* Hide bar above the viewport, matches new height */
+    top: 0;
     left: 0;
     width: 100vw;
     z-index: 1000;
