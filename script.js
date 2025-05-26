@@ -36,11 +36,11 @@ function changeImage(x,image,y)
     }
     if (x===3)
         {
-        image.src = "/images/ui/spr_demo_1.png"
+        image.src = "/images/ui/spr_demo_2.png"
         }
     if (x===4)
         {
-        image.src = "/images/ui/spr_demo_2.png"
+        image.src = "/images/ui/spr_demo_1.png"
         }
     if (x===5)
         {
@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const bar = document.createElement('div');
       bar.className = 'top-bar';
       bar.innerHTML = `
-        <a href="/devlogs/"><img src="/images/ui/spr_devlog_1.png" width="130" onmouseover="changeImage(1,this)" onmouseout="changeImage(2,this)"></a>
-        <a href="/demo/"><img src="/images/ui/spr_demo_2.png" width="100" onmouseover="changeImage(3,this)" onmouseout="changeImage(4,this)"></a>
-        <a href="/about/"><img src="/images/ui/spr_credits_1.png" width="140" onmouseover="changeImage(5,this)" onmouseout="changeImage(6,this)"></a>
-        <a href="https://discord.gg/df3t2DRjaY"><img src="/images/ui/spr_discord_1.png" width="150" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
+        <a href="/devlogs/"><img src="/images/ui/spr_devlog_1.png" width="120" onmouseover="changeImage(1,this)" onmouseout="changeImage(2,this)"></a>
+        <a href="/demo/"><img src="/images/ui/spr_demo_1.png" width="120" onmouseover="changeImage(3,this)" onmouseout="changeImage(4,this)"></a>
+        <a href="/about/"><img src="/images/ui/spr_credits_1.png" width="120" onmouseover="changeImage(5,this)" onmouseout="changeImage(6,this)"></a>
+        <a href="https://discord.gg/df3t2DRjaY"><img src="/images/ui/spr_discord_1.png" width="120" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
       `;
       document.body.insertBefore(bar, document.body.firstChild);
       break;
