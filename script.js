@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Show when mouse is near the top (e.g., within 70px)
       document.addEventListener('mousemove', function(e) {
-        if (e.clientY <= 70) {
+        if (e.clientY <= 90) { // Match the new bar height
           bar.classList.add('visible');
         } else {
           bar.classList.remove('visible');
@@ -147,16 +147,16 @@ style.textContent = `
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 32px;
+    padding: 20px 32px; /* Increased vertical padding for taller bar */
     background-color: rgba(0,0,0,0.85);
     position: fixed;
-    top: -70px; /* Hide bar above the viewport */
+    top: -90px; /* Hide bar above the viewport, matches new height */
     left: 0;
     width: 100vw;
     z-index: 1000;
     border-bottom: 2px solid #222;
     box-sizing: border-box;
-    transition: top 0.25s cubic-bezier(.4,2,.6,1);
+    transition: top 0.5s cubic-bezier(.22,1,.36,1); /* Ease out, no bounce, slower finish */
   }
   .top-bar.visible {
     top: 0; /* Slide bar into view */
