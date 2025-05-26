@@ -122,6 +122,16 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="https://discord.gg/df3t2DRjaY"><img src="/images/ui/spr_discord_1.png" width="160" onmouseover="changeImage(7,this)" onmouseout="changeImage(8,this)"></a>
       `;
       document.body.insertBefore(bar, document.body.firstChild);
+      bar.classList.remove('visible'); // Start hidden
+
+      // Show when mouse is near the top (e.g., within 70px)
+      document.addEventListener('mousemove', function(e) {
+        if (e.clientY <= 70) {
+          bar.classList.add('visible');
+        } else {
+          bar.classList.remove('visible');
+        }
+      });
       break;
 
     default:
@@ -140,12 +150,16 @@ style.textContent = `
     padding: 10px 32px;
     background-color: rgba(0,0,0,0.85);
     position: fixed;
-    top: 0;
+    top: -70px; /* Hide bar above the viewport */
     left: 0;
     width: 100vw;
     z-index: 1000;
     border-bottom: 2px solid #222;
     box-sizing: border-box;
+    transition: top 0.25s cubic-bezier(.4,2,.6,1);
+  }
+  .top-bar.visible {
+    top: 0; /* Slide bar into view */
   }
   .top-bar a {
     flex: 1 1 0;
