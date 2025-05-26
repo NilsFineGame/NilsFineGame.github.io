@@ -12,7 +12,6 @@ body {
   color: #ffffff;
   background: none; /* Remove default background */
   position: relative;
-  transform: scale(0.8);
   transform-origin: top left;
   width: 125vw; /* Prevents horizontal scrollbars due to scaling */
   min-height: 125vh;
@@ -143,4 +142,12 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
 
 .top-bar img:hover {
   /* No transform for pixel-perfect hover */
+}
+
+#site-root {
+  transform: scale(0.8);
+  transform-origin: top left;
+  width: 125vw;      /* Compensate for scaling */
+  min-height: 125vh; /* Compensate for scaling */
+  overflow-x: hidden;
 }
