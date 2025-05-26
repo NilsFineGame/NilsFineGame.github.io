@@ -90,9 +90,6 @@ h1 {
 /* Make sure iframes and images don't have transparency */
 .main-box iframe,
 .main-box img {
-}
-
-.main-box iframe {
   background: #000;
 }
 
