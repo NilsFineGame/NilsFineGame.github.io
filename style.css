@@ -119,7 +119,7 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   left: 0;
   width: 100vw;
   z-index: 100;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,1);
   display: flex;
   justify-content: space-between; /* edge-to-edge spacing */
   align-items: center;
