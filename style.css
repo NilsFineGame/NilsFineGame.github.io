@@ -46,8 +46,8 @@ body::after {
 
 /* The main content box */
 .main-box {
+  max-width: 600px; /* Or another fixed value */
   margin: 60px auto;
-  width: 50%;
   background: black;
   border: 3px solid #fff;
   padding: 10px;
@@ -63,8 +63,8 @@ h1 {
 }
 
 .main-box {
+  max-width: 600px; /* Or another fixed value */
   margin: 60px auto;
-  width: 50%;
   background: #000 !important;   /* force solid black */
   border: 3px solid #fff;
   padding: 10px;
@@ -137,11 +137,6 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   image-rendering: crisp-edges;
   display: block;
   margin: 0 auto;
-  /* No background property here! */
-}
-
-.top-bar img:hover {
-  /* No transform for pixel-perfect hover */
 }
 
 #site-root {
@@ -150,4 +145,19 @@ body, .main-box, h1, h2, h3, h4, h5, h6, p, span, a, li {
   width: 125vw;      /* Compensate for scaling */
   min-height: 125vh; /* Compensate for scaling */
   overflow-x: hidden;
+}
+
+#c-splash {
+  width: 214px;
+  height: 146px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: -o-crisp-edges;
+  image-rendering: crisp-edges;
+  /* Prevent scaling by parent containers */
+  display: block;
+  margin: 0 auto;
 }
