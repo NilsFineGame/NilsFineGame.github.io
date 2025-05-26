@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Test log: Getting Started",
+    "folder": "devlog1",
+    "date": "2025-05-25",
+    "summary": "This is a test devlog to check the structure.",
+    "img": "/images/devlogs/thumbnail_test.png"
+  },
+  {
+    "title": "Test Log 2: The Sequel",
+    "folder": "devlog2",
+    "date": "2025-05-25",
+    "summary": "Testing devlog 2.",
+    "img": "/images/devlogs/thumbnail_test.png"
+  }
+]

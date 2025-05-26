@@ -20,40 +20,27 @@
       setBackground('trees');
     </script>
     <script>
-const devlogs = [
-  {
-    title: "Test log: Getting Started",
-    folder: "devlog1",
-    date: "2025-05-25",
-    summary: "This is a test devlog to check the structure.",
-    img: "/images/devlogs/thumbnail_test.png"
-  },
-  {
-    title: "Test Log 2: The Sequel",
-    folder: "devlog2",
-    date: "2025-05-25",
-    summary: "Testing devlog 2.",
-    img: "/images/devlogs/thumbnail_test.png" 
-  }
-];
-
-const list = document.getElementById('devlog-list');
-devlogs.forEach(log => {
-  const li = document.createElement('li');
-  li.style.listStyle = "none";
-  li.style.marginBottom = "40px";
-  li.innerHTML = `
-    <div style="text-align:center;">
-      <div style="font-size:1.5em;margin-bottom:8px;">${log.title}</div>
-      <a href="./${log.folder}/">
-        <img src="${log.img}" alt="${log.title} thumbnail" style="width:180px;display:block;margin:0 auto 10px auto;">
-      </a>
-      <div style="margin-bottom:6px;color:#aaa;font-size:0.9em;">${log.date}</div>
-      <div style="max-width:400px;margin:0 auto;">${log.summary}</div>
-    </div>
-  `;
-  list.appendChild(li);
-});
+fetch('devlogs.json')
+  .then(res => res.json())
+  .then(devlogs => {
+    const list = document.getElementById('devlog-list');
+    devlogs.forEach(log => {
+      const li = document.createElement('li');
+      li.style.listStyle = "none";
+      li.style.marginBottom = "40px";
+      li.innerHTML = `
+        <div style="text-align:center;">
+          <div style="font-size:1.5em;margin-bottom:8px;">${log.title}</div>
+          <a href="./${log.folder}/">
+            <img src="${log.img}" alt="${log.title} thumbnail" style="width:300px;display:block;margin:0 auto 10px auto;">
+          </a>
+          <div style="margin-bottom:6px;color:#aaa;font-size:0.9em;">${log.date}</div>
+          <div style="max-width:400px;margin:0 auto;">${log.summary}</div>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+  });
     </script>
   </body>
 </html>
